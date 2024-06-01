@@ -1,9 +1,22 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const hugeData = require("./large-file.json");
 
-app.get("/", (req, res) => {
+app.use(express.json());
+
+app.get("/simple", (req, res) => {
   res.send("Hello World!");
+});
+
+app.get("/hugeData", (req, res) => {
+  res.send(hugeData);
+});
+
+app.get("/slow", (req, res) => {
+  setTimeout(() => {
+    res.send("hello");
+  }, 500);
 });
 
 app.listen(port, () => {
