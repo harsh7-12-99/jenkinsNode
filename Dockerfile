@@ -1,6 +1,7 @@
 # Use an official Node.js runtime as a base image
 FROM node:14-alpine
 
+# We must create the workDir before using it
 RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
 
