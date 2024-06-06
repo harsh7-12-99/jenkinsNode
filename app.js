@@ -16,7 +16,7 @@ app.get("/hugeData", (req, res) => {
 app.get("/slow", (req, res) => {
   setTimeout(() => {
     res.send("hello");
-  }, 500);
+  }, 3000);
 });
 
 app.listen(port, () => {
