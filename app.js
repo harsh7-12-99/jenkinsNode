@@ -15,7 +15,7 @@ app.get("/hugeData", (req, res) => {
 
 app.get("/slow", (req, res) => {
   setTimeout(() => {
-    res.send("hello");
+    res.send("hello again");
   }, 3000);
 });
 
