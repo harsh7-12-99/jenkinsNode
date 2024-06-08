@@ -5,6 +5,9 @@ const hugeData = require("./large-file.json");
 
 app.use(express.json());
 
+app.get("/simple", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.get("/hugeData", (req, res) => {
   res.send(hugeData);
